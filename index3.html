@@ -1,0 +1,159 @@
+<html>
+<head>
+	<title>Lets Chat!</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+    html, body
+{
+  height: 100%;
+  margin: 0;
+  padding:0;
+  position:fixed;
+
+}
+
+body
+{
+background-image: linear-gradient(to right top,green,black);
+}
+
+.header
+{
+	color: white;font-family: 'Yeon Sung';font-size: 45px;letter-spacing: 10px;margin-top: 80px;
+}
+.header img
+{
+	width: 80px;margin-left: -15px;
+}
+
+.login_div
+{
+	background: rgba(255,255,255,0.8);float: none;border-radius: 15px;
+}
+
+.logo
+{
+	width: 80px;margin-top: 30px;border-radius: 40px;
+}
+
+#login_button
+{
+	width: 80%;border-radius: 15px;
+}
+
+.room_name
+{
+	cursor: pointer;
+	font-size: 20px;
+}
+
+
+#logout
+{
+	font-size: 20px; float: right;
+}
+
+
+#output
+{
+	padding: 10px; width:80%;background: #000;border-radius: 15px;
+}
+
+.input_div_room_page
+{
+	width: 80%;
+}
+#h4{
+	color: #fff;
+}
+.input_div label
+{
+	color: white;font-size: 20px;
+}
+
+
+.input_div_message_page
+{
+	position: fixed;bottom: 0px;width: 100%;background: #000;
+}
+.input_div_message_page label
+{
+	color: white;
+}
+.input_div_message_page #msg
+{
+	width: 80%;
+}
+.input_div_message_page button
+{
+	margin-top: 15px;
+	width: 50%; 
+}
+.color_white
+{
+	color: white
+}
+
+.user_tick
+{
+	width:20px;
+}
+.message_h4
+{
+	padding-left:5px;
+	color: white;
+}
+
+#icon{
+width:70px; height:60px;
+border:5px solid  #05b87c;
+border-radius:20px;
+}
+.parent {
+	align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+	<button id="logout" onclick="logout();" class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
+	<center>
+		<h1 class="header">	
+			Kwitter	
+			<sup>
+				<img src="1968594.png">
+			</sup>
+		</h1>
+		
+		<div id="output" style="text-align: left;margin-bottom: 70px;"> </div>
+
+	</center>
+</div>
+
+<center>
+	<div class="input_div_message_page">
+		<label>Send:</label>
+		<div class='parent'>
+<input type="text" id="msg" class="form-control" placeholder="Message"><img id='icon' onclick="send()" src="2983787.png"/>
+</div></div>
+</center>
+
+<script src="index3.js"></script>
+</body>
+</html>
